@@ -80,6 +80,8 @@ body {
     font-size: 1rem;
     text-align: center;
   outline: transparent;
+  border: none; /* <-- This thing here */
+  border-radius: 7px;
 }
 
 .login-btn{
@@ -153,3 +155,6 @@ body {
   .login-btn:focus {
      background-color: #507AD8; 
   }
+
+
+
