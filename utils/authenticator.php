@@ -17,7 +17,7 @@
           
         if($count == 1){  
             // echo "<h1><center> Login Correcto </center></h1>";  
-            header("location: dashboard.html");
+            header("location: ../dashboard.html");
         }  
         else{  
             echo "<h1>Contraseña o Correo Invalido</h1>";  
