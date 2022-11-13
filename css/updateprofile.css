@@ -1,0 +1,76 @@
+.containerUpdate{
+    width: 1535px;
+    height: 600px;
+    
+    background-color: #F2F3F7;     
+}
+
+.leftUpdate{
+    margin-top: 10px;
+    margin-left: 200px;
+    float: left;
+    width: 400px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+}
+
+.rightUpdate{
+    margin-top: 10px;
+    margin-right: 200px;
+    float: right;
+    width: 720px;
+    height: 575px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+}
+
+.rightContentUpdate{
+    margin: 20px;
+    width: 300px;
+}
+
+.profile-div{
+    position: relative;
+    height: 203px;
+    width: 203px;
+
+    
+}
+
+.profile-pic-update {
+
+    display: flex;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid gray;
+    border-radius: 50%;
+
+}
+ 
+.profile-image-camera{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px; 
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: #5EA8DE;
+    display: grid;
+    place-content: center; 
+}
+
+.profile-image-camera > input {
+    display: none;
+}
+
+button.btn-primary{
+    border-radius: 20px;
+    background-color: #3D68C8;
+}
+
+button.btn-danger{
+    border-radius: 20px;
+    background-color: #D13A3A;
+}
