@@ -122,7 +122,7 @@ $(document).ready(function () {
           card.push("<h1>" + nombre + "</h1>");
           card.push("<br>");
           card.push('<div class="link-cut">');
-          card.push('<a href="#">shorty.com/' + dataResult.clvlink + "</a>");
+          card.push('<a href="sh/'+dataResult.clvlink +'">shorty.com/sh/' + dataResult.clvlink + "</a>");
           card.push(" </div>");
           card.push("</div>");
           card.push('<div class="counter">' + 0 + "</div>");
@@ -194,7 +194,7 @@ $(document).ready(function () {
       card.push("<h1>" + link.NAME + "</h1>");
       card.push("<br>");
       card.push('<div class="link-cut">');
-      card.push('<a href="#">shorty.com/' + link.CLVLINK + "</a>");
+      card.push('<a href="sh/'+link.CLVLINK +'">shorty.com/sh/' + link.CLVLINK + "</a>");
       card.push(" </div>");
       card.push("</div>");
       card.push('<div class="counter">' + link.VIEWS + "</div>");

@@ -1,0 +1,2 @@
+RewriteEngine on
+Rewriterule ^sh/(\w+)$ ad.php?CLVLINK=$1

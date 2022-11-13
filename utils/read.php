@@ -7,7 +7,8 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET");
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['CLVLINK'])) {
-	$sql = "SELECT * FROM stores WHERE CLVLINK 	 = " . mysqli_real_escape_string($con, $_GET['CLVLINK']) . " LIMIT 1";
+	$clvlink = "'".mysqli_real_escape_string($con, $_GET['CLVLINK'])."'";
+	$sql = "SELECT * FROM link WHERE CLVLINK 	 = " .$clvlink . " LIMIT 1";
 	$result = dbQuery($sql);
 	
 	$row = dbFetchAssoc($result);
