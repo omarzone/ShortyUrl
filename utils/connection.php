@@ -4,7 +4,6 @@
         $password = '';  
         $db_name = "shorty";  
 
-
         $con =  mysqli_connect($host, $user, $password, $db_name) or die('MySQL connect failed. ' . mysqli_connect_error());
 
         function dbQuery($sql) {
@@ -21,4 +20,6 @@
             global $con;
             mysqli_close($con);
         }
+
+
     ?>  

@@ -1,7 +1,7 @@
 * {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden
+  /* overflow: hidden */
 }
 
 body {
@@ -100,4 +100,104 @@ body {
   border-radius: 7px;
 }
 
+.statistics{
+  margin: 0 auto;
+  width: 75%;
+  height: 100px; 
+}
 
+.statistics-tittle{
+  margin: 30px 0 0 50px;
+}
+
+.statistics-content{
+  margin: 0px 0 0 70px;
+}
+
+.statistics-counter-links{
+  margin: -30px 0 0 30px;
+}
+
+.statistics-views{
+  margin: -64px 0 0 380px;
+}
+
+.statistics-counter-views{
+  margin: -30px 0 0 30px;
+}
+
+.statistics-clicks{
+  margin: -66px 0 0 730px;
+}
+
+.statistics-counter-clicks{
+  margin: -30px 0 0 30px;
+}
+
+.statistics-time{
+  margin: -66px 0 0 1080px;
+}
+
+.statistics-counter-time{
+  margin: -30px 0 0 30px;
+}
+
+
+.icons-order{
+  margin: 0 auto;
+  width: 75%;
+  height: 0px;
+}
+
+.home-icon{
+  margin: 30px 0 0 50px;
+}
+
+.filter-icon{
+  margin: -25px 0 0 1300px;
+}
+
+.table-content{
+  margin: 0 auto;
+  width: 75%;
+}
+
+.custom-card{
+  background-color: white;
+  margin: 0 auto;
+  width: 75%;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.points-img{
+  margin: -10px 0 0 15px;
+}
+
+.name-link{
+  margin: -90px 0 0 60px;
+}
+
+.link-cut{
+  margin: -20px 00 60px;
+}
+
+.eye-icon{
+  margin: -30px 0 0 1100px;
+}
+
+.counter{
+  margin: -110px 0 0 1070px;
+}
+
+.copy-icon{
+  margin: -30px 0 0 1200px;
+}
+
+.edit-icon{
+  margin: -30px 0 0 1270px;
+}
+
+.trash-icon{
+  margin: -30px 0 0 1340px;
+}
