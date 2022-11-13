@@ -1,3 +1,14 @@
+
+<?php 
+
+session_start();
+if (empty($_SESSION["usuario"])) {
+  # Lo redireccionamos al formulario de inicio de sesión
+  header("Location: index.html");
+  # Y salimos del script
+  exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,11 +84,16 @@
     </div>
 
     <div id="end" class="space-head">
+    
       <div class="icon-noti"></div>
+      <span ><?php echo $_SESSION["usuario"]  ?>  </span>
+      <span style="width:5px;">  </span>
       <div class="profile-pic">
+        
         <img src="img/profile.png" alt="Profile Picture" />
       </div>
       <div class="icon-arrow"></div>
+      
     </div>
   </div>
 
