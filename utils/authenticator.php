@@ -1,8 +1,8 @@
 <?php
 include('connection.php');
 
-$email = $_POST['mail'];
-$password = $_POST['password'];
+$email = $_POST["mail"];
+$password = $_POST["password"];
 
 //to prevent from mysqli injection  
 $email  = stripcslashes($email);
@@ -20,9 +20,10 @@ $count = mysqli_num_rows($result);
 if ($count == 1) {
     // echo "<h1><center> Login Correcto </center></h1>";  
     header("location: ../dashboard.php");
-    // echo $row['NAME'];
+    echo $row['NAME'];
     session_start();
-    $_SESSION["usuario"] = $row['NAME'];;
+    $_SESSION["usuario"] = $row['NAME'];
+    $_SESSION["profilePic"] = $row["PROFILEPIC"];
 } else {
     echo "<h1>Contraseña o Correo Invalido</h1>";
     session_start();

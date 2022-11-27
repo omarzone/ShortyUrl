@@ -1,3 +1,18 @@
+<?php 
+
+session_start();
+if (empty($_SESSION["usuario"])) {
+  # Lo redireccionamos al formulario de inicio de sesión
+  header("Location: index.html");
+  # Y salimos del script
+  exit();
+}
+
+$img = $_SESSION["profilePic"];
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/updateprofile.css" />
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
@@ -16,7 +31,9 @@
 <body>
     <div class="header">
         <div id="start" class="space-head">
-            <h1>SHORTY</h1>
+            <a href="dashboard.php" class="dashboard-redirect">
+                <h1>SHORTY</h1>
+            </a>
         </div>
 
         <div id="center" class="space-head">
@@ -36,6 +53,8 @@
         </div>
     </div>
 
+    
+
 
     <div class="containerUpdate">
         <div class="leftUpdate">
@@ -45,7 +64,7 @@
 
                 <div class="profile-div">
                     <div class="profile-pic-update">
-                        <img src="img/profile.png" alt="Profile Picture" />
+                        <?php  echo("<svg src = $img") ?>
                     </div>
 
                     <form class="profile-image-camera" name="formulario" method="post" action="/send.php"
@@ -99,6 +118,8 @@
 
         </div>
     </div>
+
+
 </body>
 
 </html>
