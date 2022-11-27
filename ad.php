@@ -51,8 +51,9 @@
 
             <div class="image">
                 
-                
-
+                <center>
+                    <img src = "../img/publicidad.png" />
+                </center>
         </div>
       </div>
 

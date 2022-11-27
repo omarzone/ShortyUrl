@@ -74,3 +74,9 @@ button.btn-danger{
     border-radius: 20px;
     background-color: #D13A3A;
 }
+
+
+.dashboard-redirect{
+    color: black;
+    text-decoration: none;
+}

@@ -8,6 +8,8 @@ if (empty($_SESSION["usuario"])) {
   # Y salimos del script
   exit();
 }
+
+$img = $_SESSION["profilePic"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,7 +74,9 @@ if (empty($_SESSION["usuario"])) {
 
   <div class="header">
     <div id="start" class="space-head">
-      <h1>SHORTY</h1>
+      <a href="dashboard.php">
+        <h1>SHORTY</h1>
+      </a>
     </div>
 
     <div id="center" class="space-head">
@@ -88,10 +92,11 @@ if (empty($_SESSION["usuario"])) {
       <div class="icon-noti"></div>
       <span ><?php echo $_SESSION["usuario"]  ?>  </span>
       <span style="width:5px;">  </span>
-      <div class="profile-pic">
-        
-        <img src="img/profile.png" alt="Profile Picture" />
-      </div>
+      <a href="updateprofile.php">
+        <div class="profile-pic">
+        <?php  echo("<img src='$img' alt='profilePicture'/>") ?>
+        </div>
+      </a>
       <div class="icon-arrow"></div>
       
     </div>
