@@ -47,7 +47,7 @@ $img = $_SESSION["profilePic"];
         <div id="end" class="space-head">
             <div class="icon-noti"></div>
             <div class="profile-pic">
-                <img src="img/profile.png" alt="Profile Picture" />
+                <?php  echo("<img src='$img' alt='profilePicture'/>") ?>
             </div>
             <div class="icon-arrow"></div>
         </div>
@@ -64,7 +64,7 @@ $img = $_SESSION["profilePic"];
 
                 <div class="profile-div">
                     <div class="profile-pic-update">
-                        <?php  echo("<svg src = $img") ?>
+                        <?php  echo("<img src='$img' alt='profilePicture'/>") ?>
                     </div>
 
                     <form class="profile-image-camera" name="formulario" method="post" action="/send.php"

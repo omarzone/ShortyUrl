@@ -5,7 +5,7 @@
     $name = $_POST["nickname"];
 
     //Requesting a profilePic by the DiceBear AvatarAPI
-    $response = file_get_contents("https://avatars.dicebear.com/api/identicon/$name.svg?r=50");
+    $response = "https://avatars.dicebear.com/api/identicon/$name.png?r=50&scale=75";
 
 
 

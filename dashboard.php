@@ -8,6 +8,8 @@ if (empty($_SESSION["usuario"])) {
   # Y salimos del script
   exit();
 }
+
+$img = $_SESSION["profilePic"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +94,7 @@ if (empty($_SESSION["usuario"])) {
       <span style="width:5px;">  </span>
       <a href="updateprofile.php">
         <div class="profile-pic">
-          <img src="img/profile.png" alt="Profile Picture" />
+        <?php  echo("<img src='$img' alt='profilePicture'/>") ?>
         </div>
       </a>
       <div class="icon-arrow"></div>
