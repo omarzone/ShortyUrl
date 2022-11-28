@@ -1,6 +1,6 @@
 <!-- <?php 
 
-    $clvlink = $_GET["CLVLINK"];
+$clvlink = $_GET["CLVLINK"];
     
 
     
@@ -53,7 +53,16 @@
             <div class="image">
                 
                 <center>
-                    <img src = "../img/publicidad.png" />
+                <script type="text/javascript">
+	atOptions = {
+		'key' : 'f895143b0b4962c64c33dd04af4a9ba7',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplayformat.com/f895143b0b4962c64c33dd04af4a9ba7/invoke.js"></scr' + 'ipt>');
+</script>
                 </center>
         </div>
       </div>

@@ -182,4 +182,3 @@ $(document).ready(function () {
 function avgtime() {
    return TimeCounter / tempInt;
 }
-

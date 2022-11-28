@@ -32,6 +32,7 @@ $img = $_SESSION["profilePic"];
 </head>
 
 <body>
+<div class="clvuserOculta" style="display: none;" data-clvuser= "<?php echo $_SESSION["usuario_id"];?>"></div>
     <div class="header">
         <div id="start" class="space-head">
             <a href="dashboard.php" class="dashboard-redirect">

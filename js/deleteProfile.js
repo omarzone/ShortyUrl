@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#DeleteProfile").on("click", function (){
     
     var el = this;
-
+    var clvuser = $(".clvuserOculta").attr("data-clvuser");
     var deleteid = $(this).data("id");
 
     var confirmalert = confirm("Seguro que desea borrar?");
@@ -13,10 +13,10 @@ $(document).ready(function () {
         url: "utils/deleteProfile.php",
         type: "POST",
           //PENDIENTE
-        data: { CLVUSER: 69 },
+        data: { CLVUSER: clvuser },
         success: function (response) {
           console.log(response);
-          window.location.href = '/index.html';
+          window.location.href = '/shorty/index.html';
         },
       });
     };

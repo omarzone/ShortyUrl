@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['CLVUSER']) && isset($_G
    if($row['PASSWORD'] == $password){
     echo 1;
     //PENDIENTE
-    $update = "UPDATE `user` SET `PASSWORD`='$newPassword' WHERE `CLVUSER` = '8'";
+    $update = "UPDATE `user` SET `PASSWORD`='$newPassword' WHERE `CLVUSER` = '".$_GET['CLVUSER']."'";
     $result = mysqli_query($con, $update); 
 
    } else {

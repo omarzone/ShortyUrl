@@ -348,7 +348,10 @@ $(document).ready(function () {
     $(".statistics-counter-links h2").html(json["statistics"]["LINKS"]);
     $(".statistics-counter-views h2").html(json["statistics"]["views"]);
     $(".statistics-counter-clicks h2").html(json["statistics"]["clicks"]);
-    $(".statistics-counter-time h2").html(json["statistics"]["avgtime"] + " s");
+    var avgtimeShort = json["statistics"]["avgtime"].toString().substring(0,4);
+    
+    $(".statistics-counter-time h2").html(avgtimeShort + " s");
+    
   });
 
   //Delete Link
@@ -531,7 +534,10 @@ $(document).ready(function () {
           $(".statistics-counter-links h2").html(json["statistics"]["LINKS"]);
           $(".statistics-counter-views h2").html(json["statistics"]["views"]);
           $(".statistics-counter-clicks h2").html(json["statistics"]["clicks"]);
-          $(".statistics-counter-time h2").html(json["statistics"]["avgtime"] + " s");
+          var avgtimeShort = json["statistics"]["avgtime"].toString().substring(0,4);
+   
+         
+          $(".statistics-counter-time h2").html(avgtimeShort + " s");
         });   
         } else {
           console.log(deleteid);
