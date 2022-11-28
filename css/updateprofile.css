@@ -1,13 +1,12 @@
 .containerUpdate{
-    width: 1535px;
-    height: 600px;
+    height: 800px;
     
     background-color: #F2F3F7;     
 }
 
 .leftUpdate{
     margin-top: 10px;
-    margin-left: 200px;
+    margin-left: 450px;
     float: left;
     width: 400px;
     height: 350px;
@@ -17,7 +16,7 @@
 
 .rightUpdate{
     margin-top: 10px;
-    margin-right: 200px;
+    margin-right: 300px;
     float: right;
     width: 720px;
     height: 575px;
@@ -65,12 +64,12 @@
     display: none;
 }
 
-button.btn-primary{
+input.btn-primary{
     border-radius: 20px;
     background-color: #3D68C8;
 }
 
-button.btn-danger{
+input.btn-danger{
     border-radius: 20px;
     background-color: #D13A3A;
 }
