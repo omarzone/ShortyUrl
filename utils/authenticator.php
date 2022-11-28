@@ -23,6 +23,7 @@ if ($count == 1) {
     echo $row['NAME'];
     session_start();
     $_SESSION["usuario"] = $row['NAME'];
+    $_SESSION["usuario_id"] = $row['CLVUSER'];
     $_SESSION["profilePic"] = $row["PROFILEPIC"];
 } else {
     echo "<h1>Contraseña o Correo Invalido</h1>";

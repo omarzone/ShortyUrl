@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['CLVLINK'])) {
 	
 	echo json_encode($row);
 } else {
-	$sql = "SELECT * FROM stores INNER JOIN link ON stores.CLVLINK=link.CLVLINK WHERE CLVUSER = " .$_GET['CLVUSER']."";
+	$sql = "SELECT * FROM stores INNER JOIN link ON stores.CLVLINK=link.CLVLINK WHERE CLVUSER = " .$_GET['CLVUSER']." ORDER BY id DESC";
 	$results = dbQuery($sql);
 	
 	$rows = array();
@@ -35,7 +35,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['CLVLINK'])) {
 	}
 	
 	$statistics["LINKS"] = count($rows);
-	$statistics["avgtime"] = $statistics["avgtime"]/count($rows);
+
+	if(count($rows)>0){
+		$statistics["avgtime"] = $statistics["avgtime"]/count($rows);
+	}else{
+		$statistics["avgtime"] = 0;
+	}
+	
 
 	$arrayResponse = array('statistics'=> $statistics, 'links'=>$rows);
 	echo json_encode($arrayResponse);
