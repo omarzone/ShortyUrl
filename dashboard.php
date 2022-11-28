@@ -30,8 +30,8 @@ $img = $_SESSION["profilePic"];
 </head>
 
 <body>
-
-
+ <div class="clvuserOculta" style="display: none;" data-clvuser= "<?php echo $_SESSION["usuario_id"];?>"></div>
+ <div id="clvlinkOculta" style="display: none;"></div>
   <!-- MODAL NEW LINK -->
 
   <div class="modal" tabindex="-1" role="dialog" id="modal">
@@ -51,7 +51,7 @@ $img = $_SESSION["profilePic"];
               <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
             </div>
             <div class="form-group">
-              <label for="apellidoPaterno">Link:</label>
+              <label for="link">Link:</label>
               <input type="text" class="form-control" id="link" placeholder="Link" name="link">
             </div>
             <!-- <input type="button" name="save" class="btn btn-primary" value="Registrar" id="butsave"> -->
@@ -67,6 +67,48 @@ $img = $_SESSION["profilePic"];
   </div>
 
   <!-- END MODAL NEW LINK -->
+
+
+
+
+
+
+
+    <!-- MODAL UPDATE LINK -->
+
+    <div class="modal" tabindex="-1" role="dialog" id="modalUpdate">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modificar Link Acortado</h5>
+
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-success alert-dismissible" id="success" style="display:none;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+          </div>
+          <form id="fupForm" name="form1" method="post">
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" class="form-control" id="nombre2" placeholder="Nombre" name="nombre">
+            </div>
+            <div class="form-group">
+              <label for="link">Link:</label>
+              <input type="text" class="form-control" id="link2" placeholder="Link" name="link">
+            </div>
+            <!-- <input type="button" name="save" class="btn btn-primary" value="Registrar" id="butsave"> -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary " data-dismiss="modalUpdate" id="cerrar2">Cerrar</button>
+          <input type="button" name="update" class="btn btn-primary" value="Actualizar" id="butupdate">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- END MODAL UPDATE LINK -->
 
 
 
@@ -89,7 +131,7 @@ $img = $_SESSION["profilePic"];
 
     <div id="end" class="space-head">
     
-      <div class="icon-noti"></div>
+      <!-- <div class="icon-noti"></div> -->
       <span ><?php echo $_SESSION["usuario"]  ?>  </span>
       <span style="width:5px;">  </span>
       <a href="updateprofile.php">
@@ -97,7 +139,7 @@ $img = $_SESSION["profilePic"];
         <?php  echo("<img src='$img' alt='profilePicture'/>") ?>
         </div>
       </a>
-      <div class="icon-arrow"></div>
+      <a href="utils/logout.php"><div class="icon-logout"></div></a>
       
     </div>
   </div>
@@ -154,16 +196,17 @@ $img = $_SESSION["profilePic"];
             <img src="img/home-icon.png" height="20px" width="20px" />Inicio
           </a>
         </div>
-        <div class="filter-icon" alt="filter">
+        <!-- <div class="filter-icon" alt="filter">
           <a href="#">
             <img src="img/filter-icon.png" height="20px" width="20px" /> Filtro
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
     <br>
     <br>
     <div class="cards-content">
+      
       <!-- <div class="custom-card">
         <br>
         <br>
@@ -192,12 +235,31 @@ $img = $_SESSION["profilePic"];
         </div>
       </div> -->
       
-      <br>
-      <br>
+      
       
 
     </div>
   </div>
+
+
+
+
+
+<!-- TOAST Copiado -->
+<div class="toast-container" style="position: absolute; bottom: 10px; right: 10px;">
+    <div class="toast fade hide">
+        <div class="toast-header">
+            <strong class="me-auto"><i class="bi-globe"></i> Shorty!</strong>
+            <small>Ahora</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            Url copiada correctamente!
+        </div>
+    </div>
+</div>
+<!-- END TOAST COPIADO -->
+
 </body>
 
 </html>

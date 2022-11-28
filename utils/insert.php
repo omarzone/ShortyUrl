@@ -16,13 +16,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //Si es un json valido entonces registramos en la bd
 
         $data = json_decode($json);
-        $sql = "INSERT INTO link VALUES('" . mysqli_real_escape_string($con, $data->clvlink) . "','" . mysqli_real_escape_string($con, $data->name) . "','" . mysqli_real_escape_string($con, $data->avgtime) . "','" . mysqli_real_escape_string($con, $data->views) . "','" . mysqli_real_escape_string($con, $data->clicks) . "','" . mysqli_real_escape_string($con, $data->url) . "')";
+        $sql = "INSERT INTO `link`(`CLVLINK`, `NAME`, `AVGTIME`, `VIEWS`, `CLICKS`, `URL`) VALUES ('".$data->clvlink."','".$data->name."',$data->avgtime,$data->views,$data->clicks,'".$data->url."')";
+        // $sql = "INSERT INTO link VALUES('" . mysqli_real_escape_string($con, $data->clvlink) . "','" . mysqli_real_escape_string($con, $data->name) . "','" . mysqli_real_escape_string($con, $data->avgtime) . "','" . mysqli_real_escape_string($con, $data->views) . "','" . mysqli_real_escape_string($con, $data->clicks) . "','" . mysqli_real_escape_string($con, $data->url) . "')";
         $sqlRelation = "INSERT INTO stores VALUES('" . mysqli_real_escape_string($con, $data->clvuser) . "','" . mysqli_real_escape_string($con, $data->clvlink) . "')";
        
         if (dbQuery($sql)) {
 
             if(dbQuery($sqlRelation)){
-                echo json_encode(array("statusCode" => 200, "clvlink" => $data->clvlink, "clvuser" => $data->clvuser));
+                echo json_encode(array("statusCode" => 200, "clvlink" => $data->clvlink, "clvuser" => $data->clvuser, "url" => $data->url, "name" => $data->name));
             }else{
                 echo json_encode(array("statusCode" => 201));
             }
