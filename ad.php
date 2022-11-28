@@ -1,10 +1,10 @@
-<?php 
+<!-- <?php 
 
     $clvlink = $_GET["CLVLINK"];
+    
 
-
-
-?>
+    
+?> -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="../css/ad.css">
     </head>  
     <body>
-    
+        <div class="clvLinkOculta" style="display: none;" data-clvLink="<?php echo $clvlink;?>"></div>
         <div class= "container">
             <div class="header">
                 <div class="headerLeft">
@@ -30,8 +30,9 @@
                         <b>Llévame al link</b></button>
                         <p style="display: none;" id="contador"><b> 5 segundos para obtener el link.</b></p>
 
-                    <a href="#" class="link-btn" id="link-generado">
-                        <b>Llévame al link</b></a>
+                    <a href="#" class="link-generado" id="link-generado">
+                        <b>Llévame al link</b>
+                    </a>
 
                 </div>
             </div>

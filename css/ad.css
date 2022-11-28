@@ -55,6 +55,22 @@ header{
 
 }
 
+.link-generado{
+    display: inline-block;
+    padding: 15px 30px;
+    background: #50A1DB;
+    color: #fff;
+    border-radius: 25px;
+    font-size: larger;
+
+}
+
+
+.link-generado:hover{
+    opacity: 0.9;    
+
+}
+
 
 .nav{
     background-color: rgba(203, 203, 203, 0.992);
